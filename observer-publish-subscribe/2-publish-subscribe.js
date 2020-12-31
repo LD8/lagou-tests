@@ -73,6 +73,10 @@ const downloadManager = new DownloadManager()
 //   console.log(`Task id: ${taskId}, event ${eventType}, load data from ${url}`)
 // }
 
+const log = (eventType, taskId, url) => {
+  console.log(`Task id: ${taskId}, event ${eventType}, load data from ${url}`)
+}
+
 // 6. 注册事件：用户开始请求数据
 const downloadTask1 = downloadManager.subscribe('dataReady', (eventType, taskId, url) => {
   console.log(`Task id: ${taskId}, event ${eventType}, load data from ${url}`)
